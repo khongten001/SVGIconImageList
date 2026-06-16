@@ -202,7 +202,10 @@ var
 begin
   LPath := ParamStr(1);
   if LPath = '' then
-    LPath := ExtractFilePath(ParamStr(0))+'..\..\svg_examples';
+    LPath := ExtractFilePath(ParamStr(0))+'..\svg_examples';
+  if not System.SysUtils.DirectoryExists(LPath) then
+    LPath := ExtractFilePath(ParamStr(0));
+
   DirSelection.Directory := LPath;
 end;
 
@@ -351,7 +354,7 @@ end;
 procedure TfmExplorerSVG.TrackBarChange(Sender: TObject);
 begin
   //Resize all icons into ImageList
-  SVGIconImageList.Size := TrackBar.Position;
+  SVGIconImageList.Size := Round(TrackBar.Position * ScaleFactor);
 end;
 
 procedure TfmExplorerSVG.UpdateListView;

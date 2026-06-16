@@ -134,7 +134,9 @@ end;
 procedure TSVGViewerForm.FormCreate(Sender: TObject);
 begin
   Caption := Application.Title;
-  SourcePath := ExtractFilePath(Application.ExeName)+'..\..\svg_examples';
+  SourcePath := ExtractFilePath(Application.ExeName)+'..\svg_examples';
+  if not DirectoryExists(SourcePath) then
+    SourcePath := ExtractFilePath(Application.ExeName);
 
   FrameViewerD2D.InitViewer('Native Direct2D', GetD2DSVGFactory);
   {$IFDEF SKIA}

@@ -25,7 +25,7 @@ object SVGViewerForm: TSVGViewerForm
       Left = 1
       Top = 42
       Width = 198
-      Height = 257
+      Height = 328
       Align = alClient
       ItemHeight = 13
       TabOrder = 0

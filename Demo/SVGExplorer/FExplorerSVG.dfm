@@ -116,7 +116,7 @@ object fmExplorerSVG: TfmExplorerSVG
     object ImageListLabel: TLabel
       Left = 1
       Top = 42
-      Width = 583
+      Width = 63
       Height = 16
       Align = alTop
       Alignment = taCenter
@@ -127,7 +127,6 @@ object fmExplorerSVG: TfmExplorerSVG
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      ExplicitWidth = 63
     end
     object spBottom: TSplitter
       Left = 1

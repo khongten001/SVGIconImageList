@@ -1,4 +1,7 @@
 <style type="text/css">
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
 code{
   font-family: "Consolas", monospace;
 }
@@ -31,7 +34,7 @@ td{
 </style>
 <h1>SVGIconImageList <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg" alt="License"/></a></h1>
 <h2>Four engines to render SVG (Delphi Image32, SVGMagic, Skia4Delphi, Direct2D wrapper) and four components to simplify use of SVG images (resize, fixedcolor, grayscale&hellip;)</h2>
-<h3>Actual official version 4.7.3 (VCL+FMX)</h3>
+<h3>Actual official version 4.7.4 (VCL+FMX)</h3>
 <table>
   <tr>
     <th>Component</th>
@@ -54,6 +57,7 @@ td{
     <td><strong>TSVGIconImageList</strong> is an extended ImageList for Delphi (VCL+FMX) with an embedded SVG image collection. Use this component to simplify replace of ImageList for older Delphi Apps and obtain auto-scaling of Icons!</td>
   </tr>
 </table>
+<br />
 <h2>New integration with SVGMagic Library for Animated SVG</h2>
 <p>Starting with version 4.6.0, a new Delphi/Native library has been added to the project.</p>
 <p>This library contains a unique feature: the ability to <strong>display animated SVG files</strong>. In the current implementation, the library is used as a new available rendering engine for the standard SvgIconImageList components, but other components are available for displaying animated SVGs, as shown in the SVGMagic-specific demo.</p>
@@ -125,6 +129,7 @@ td{
     <td align="right">10688ms</td>
   </tr>
 </table>
+<br />
 <p>As you can see, the engines perform differently depending on the icons and their complexity.</p>
 <p><sup>(1)</sup>Notice that Image32 and Skia4Delphi are the only engines capable of rendering blur effect (that is always slow to calculate): this is the reason of &ldquo;slow&rdquo; performance to render Papirus icons that contains blur effect.</p>
 <p><strong>Sample image of VCL version</strong></p>
@@ -156,6 +161,11 @@ Notice that those components are &ldquo;specific&rdquo; of SVGMagic Library, bec
 <p><img src="./Demo/Images/SupportingDelphi.jpg" alt="Delphi 13 Support"/></p>
 <p>Related links: <a href="https://www.embarcadero.com">embarcadero.com</a> - <a href="https://learndelphi.org">learndelphi.org</a></p>
 <h3>RELEASE NOTES</h3>
+<p>16 Jun 2026 - version 4.7.4</p>
+<ul>
+<li>Removed Build for Windows ARM Platform by Installer</li>
+<li>Fixed &ldquo;DisableOpacity&rdquo; value in Icons with TToolBar/DisabledImageList</li>
+</ul>
 <p>11 Apr 2026 - version 4.7.3</p>
 <ul>
 <li>Aligned to Image32 ver. 4.9 of 8 April 2026</li>
